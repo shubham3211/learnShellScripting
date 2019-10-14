@@ -196,7 +196,7 @@
 #   echo "Invalid age"
 # fi
 
-country=India
+# country=India
 #another way of using and operator
 # if [ $country == "India" -a  $country != "Japan" ]
 # then 
@@ -506,5 +506,223 @@ country=India
 # readonly -f 
 
 # $$ is used to print the pid of the script
-# echo "pid is $$"
+# trap "sigint comman is dected" 2
+# echo "Pid is $$"
+# while (( count < 10 )) 
+# do 
+#   sleep 10
+#   echo $count
+#   (( count++ ))
+# done
+
+# trap "Exit command is detected" 0
+# echo "Hello world"
+# exit 0
+
+#bash -x is used to debug the script ie run the script like this bash -x ./a.sh
+#we can also write #!/bin/bash -x at the top to debug the script
+#we can write set -x and debugging will start from the point we write set -x 
+#set +x would deactivate debugging
+# set -x
+# while (( count < 10 ))
+# do
+#   echo $count
+#   (( count++ ))
+# done
+# set +x
+
+# echo $USER
+# echo $LOGNAME
+# echo $PATH
+# echo $PWD
+# echo $?
+
+# args=("$@")
+# echo ${args[0]}
+# echo $#
+# echo $*
+
+#we can use commands like this
+# echo Today date is $(date)
+
+# echo "List of files that start with $(ls [a-z]*)"
+
+# echo "This is a echo command"
+# wc < ./w.txt
+
+# ls > cat.txt
+
+# cat w.txt >> z.txt
+
+# if [ -d Acbd ]
+# then
+#   echo "It is a directory"
+# fi
+
+# if [ -f cat.txt ]
+# then
+#   echo "It is a file and exist"
+# fi
+
+# if [ -s cat.txt ]
+# then
+#   echo "The size is greater than 0"
+# fi
+
+# if [ -r cat.txt -o -w cat.txt -o -x cat.txt ]
+# then 
+#   echo "The file is readable or writable or executable"
+# fi
+
+# if [ -a cat.txt ]
+# then
+#   echo "File is ascii file"
+# else
+#   echo "File is not an ascii file"
+# fi
+
+# [ -d cat.txt ]
+# echo $?
+
+# s1=alpha
+# s2=beta
+
+# if [ s1 == s2 ]
+# then
+#   echo "The strings are equal"
+# fi
+
+# if [ s1 != s2 ]
+# then
+#   echo "The strings are not equal"
+# fi
+
+# if [ -n s1 ]
+# then
+#   echo "The length of string is greater than 0"
+# fi
+
+# if [[ s1 < s2 ]]
+# then
+#   echo "S1 is less than s2"
+# else
+#   echo "s1 is greater than s2"
+# fi
+
+# s3=
+
+# if [ -z s3 ]
+# then 
+#   echo "Length of string is 0"
+# else
+#   echo "Length of string is not 0"
+# fi
+
+# num1=25
+# num2=5
+
+# echo $(( num1 + num2 ))
+# echo $(( num1 - num2 ))
+# echo $(( num1 * num2 ))
+# echo $(( num1 / num2 ))
+# echo $(( num1 % num2 ))
+
+# echo $(expr $num1 + $num2)
+# echo $(expr $num1 - $num2)
+# echo $(expr $num1 \* $num2)
+# echo $(expr $num1 / $num2)
+# echo $(expr $num1 % $num2)
+
+# echo "relational operators"
+# echo $(( num1 > num2 ))
+# if [ $num2 -le $num1 ]
+# then
+#   echo "$num2 less than equal to $num1"
+# fi
+
+#here 0 is for success and 1 is for failure only for echo $0
+# test 10 == 1
+# echo $?
+# num1=25
+# num2=5
+# s=Shubham
+# #here 0 is for success and 1 is for failure only for echo $0 
+# [ $num1 != $num2 ]
+# echo $?
+
+# [ -f ./cat.txt ]
+# echo $?
+
+# test $num1 -le $num2
+# echo $?
+
+# test $num1 -ge $num2
+# echo $?
+
+# test -n $s
+# echo $?
+
+# test -r ./cat.txt
+# echo $?
+
+# echo $@
+# args=($@)
+# echo ${args[1]}
+
+# echo $(( ${args[0]} + ${args[1]} + ${args[2]} + ${args[3]} + ${args[4]}))
+# echo $(expr ${args[0]} + ${args[1]} + ${args[2]} + ${args[3]} + ${args[4]} )
+
+# if [ -r ./cat.txt ]
+# then
+#   cat ./cat.txt | echo $(wc)
+#   cat ./cat.txt | wc
+# fi
+
+# args=($@)
+# echo $((${args[0]} + ${args[1]}))
+# echo $((${args[0]} * ${args[1]}))
+# echo $((${args[0]} / ${args[1]}))
+# echo $(expr ${args[0]} + ${args[1]})
+# echo $(expr ${args[0]} - ${args[1]})
+# echo $(expr ${args[0]} \* ${args[1]})
+
+# num1=10
+# num2=20
+
+# if [ $num1 -lt $num2 ]
+# then
+#   echo "$num1 less than $num2"
+# fi
+
+
+# file1=cat.txt
+# file2=c1.txt
+# if cp $file1 $file2
+# then
+#   echo "Command executed successfully"
+# fi
+
+# adapter=EGA
+
+# if [ $adapter=ma ]
+# then 
+#   echo "You have enhanced graphics adapter"
+# elif [ $adapetr=EGA ]
+# then
+#   echo "You have ma"
+# else 
+#   echo "Dont know the type"
+# fi
+
+# count=1
+# while [ $count -lt 11 ]
+# do
+#   echo $count
+#   ((count++))
+# done
+
+# echo -e "Enter the name of the file \c"
+# read fileName
+
+
 
